@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+    .logo-bloc{
+        img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        }
+    }
+    nav {
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+        a {
+            border-bottom: 2px solid rgba($text-color-default, 0);
+            transition: .2s;
+            &:hover {
+                border-bottom: 2px solid rgba($text-color-default, 1);
+            }
+        }
+    }
+}
+
+main {
+    max-width: 1240px;
+    margin: auto;
+}

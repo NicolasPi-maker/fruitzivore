@@ -9,3 +9,9 @@ a {
     color: $text-color-default;
     text-decoration: none;
 }
+
+.list-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
   }
 });
 
-/* GET menu by id */
+/* GET menu informations by id */
 router.get('/:id', function(req, res, next) {
   const currentId = req.params.id;
   let getCurrentMenuQuery = `SELECT * FROM menus WHERE id =${currentId}`;

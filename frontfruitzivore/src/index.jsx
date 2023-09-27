@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import menusData from './app/data.json';
 import './style/normalize.css';
 import './style/main.scss';
 import Header from './components/Header';
@@ -14,7 +15,7 @@ root.render(
       <Header />
       <Routes>
         <Route exact path='/'
-          element={<Home />}
+          element={<Home data={menusData} />}
         />
         {/* <Route exact path='/profil'
           element={<Profil />}

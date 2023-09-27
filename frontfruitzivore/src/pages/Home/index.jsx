@@ -14,7 +14,7 @@ function Home({ data }) {
       <p>LE site de commande en ligne à destination pour des fructivores</p>
       <div>
         <h2>Le menu en vogue</h2>
-
+        TROLL
       </div>
       <div className="list-row">
         <ButtonLink url='/menu' content='Nos menus' />

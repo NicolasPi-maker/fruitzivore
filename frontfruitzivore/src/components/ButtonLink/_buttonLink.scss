@@ -1,0 +1,21 @@
+.button-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 50px;
+    width: 130px;
+    height: 50px;
+    background-color: $color-one;
+    box-shadow: 2px 2px 1px black;
+    transition: .3s;
+    cursor: pointer;
+    a {
+        color: $color-three;  
+        text-transform: uppercase;      
+        font-weight: 600;
+    }
+    &:hover {
+        transform: scale(1.02);
+    }
+}

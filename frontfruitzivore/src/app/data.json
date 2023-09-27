@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "title": "test1",
+        "description": "test,test,test,test",
+        "price": 200,
+        "thumbnail": "img.jpg",
+        "starter": {
+            "id": 1,
+            "title": "testStarter",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "starter"
+        },
+        "plate":{
+            "id": 4,
+            "title": "testPlate",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "plate"
+        },
+        "dessert":{
+            "id": 6,
+            "title": "testDessert",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "dessert"
+        }
+    },
+    {
+        "id": 1,
+        "title": "test2",
+        "description": "test,test,test,test",
+        "price": 200,
+        "thumbnail": "img.jpg",
+        "starter": {
+            "id": 1,
+            "title": "testStarter",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "starter"
+        },
+        "plate":{
+            "id": 4,
+            "title": "testPlate",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "plate"
+        },
+        "dessert":{
+            "id": 6,
+            "title": "testDessert",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "dessert"
+        }
+    },
+    {
+        "id": 1,
+        "title": "test3",
+        "description": "test,test,test,test",
+        "price": 200,
+        "thumbnail": "img.jpg",
+        "starter": {
+            "id": 1,
+            "title": "testStarter",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "starter"
+        },
+        "plate":{
+            "id": 4,
+            "title": "testPlate",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "plate"
+        },
+        "dessert":{
+            "id": 6,
+            "title": "testDessert",
+            "description": "test,test,test,test",
+            "price": 15,
+            "type": "dessert"
+        }
+    }
+]

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ButtonLink from "../../components/ButtonLink";
+import MenuHype from "../../components/MenuHype";
 
 function Home({ data }) {
   const menusData = data;
@@ -14,8 +15,8 @@ function Home({ data }) {
       <p>LE site de commande en ligne à destination pour des fructivores</p>
       <div>
         <h2>Le menu en vogue</h2>
-        TROLL
       </div>
+      <MenuHype data={menuHype} />
       <div className="list-row">
         <ButtonLink url='/menu' content='Nos menus' />
         <ButtonLink url='/unit' content='A la carte' />

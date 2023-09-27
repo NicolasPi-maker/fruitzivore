@@ -57,8 +57,7 @@ router.post('/', function(req, res, next) {
         ${newPost.description},
         ${newPost.price},
         ${newPost.thumbnail},
-      )
-      
+      );
     `;
     sqlQuery(query, (error, results) => {
 

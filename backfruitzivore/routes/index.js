@@ -16,6 +16,8 @@ router.get('/', function(req, res, next) {
   }
 });
 
+console.log('🥳');
+
 /* GET menu informations by id */
 router.get('/:id', function(req, res, next) {
   const currentId = req.params.id;

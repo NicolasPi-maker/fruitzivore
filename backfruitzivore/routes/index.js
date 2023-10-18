@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var sqlQuery = require('./mysql.js')
+const {log} = require("debug");
+const {compileETag} = require("express/lib/utils");
 
 // Send a query to database to get the selected menu by id in BDD
 const getMenuById = (id, res)  => {
@@ -27,7 +29,7 @@ const getMenuById = (id, res)  => {
 
 /* GET all menus. */
 router.get('/', function(req, res, next) {
-  let query = "SELECT * FROM menus";
+  let query = "SELECT * FROM plates p INNER JOIN menus m ON p.menu_id = m.id";
   try {
     sqlQuery(query, (error, results) => {
       res.json(results);

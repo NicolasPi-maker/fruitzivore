@@ -4,7 +4,7 @@ import MenuHype from "../../components/MenuHype";
 
 function Home({ data }) {
   const menusData = data;
-  const [menuHype, setMenuHype] = useState() 
+  const [menuHype, setMenuHype] = useState({}) 
   
   useEffect(() => {
     setMenuHype(menusData[0]);

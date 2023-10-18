@@ -1,0 +1,9 @@
+.menu-card {
+    background-color: $color-light;
+    border: 1px solid $color-four;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

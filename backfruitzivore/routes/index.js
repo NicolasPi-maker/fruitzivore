@@ -3,7 +3,7 @@ var router = express.Router();
 var sqlQuery = require('./mysql.js')
 
 // Send a query to database to get the selected menu by id in BDD
-const getMenuById = (id, res) => {
+const getMenuById = (id, res)  => {
   if(!id) {
     res.status(404);
     throw new Error('Aucun identifiant n\'a été renseigné');
@@ -47,7 +47,7 @@ router.get('/:id', function(req, res, next) {
   console.log(getMenuById(currentId, res));
 });
 
-/* GET menu informations by id */
+/* Post menu informations by id */
 router.post('/', function(req, res, next) {
   const newPost = req.body;
   
@@ -81,7 +81,7 @@ router.delete('/:id', function(req, res, next) {
     `;
     sqlQuery(query, (error, results) => {
       res.json(results);
-      res.status(200);
+      res.status(204);
     })
   } catch (error) {
     res.status(500);

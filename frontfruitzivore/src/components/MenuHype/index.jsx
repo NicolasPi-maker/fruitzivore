@@ -8,8 +8,8 @@ function MenuHype({ data }) {
 
     return (
       <div className="menu-card">
+        <img src={menusData?.thumbnail} alt={menusData?.title} />
         <div className="menu-title">
-          <img src={menusData?.thumbnail} alt={menusData?.title} />
           <div>
               <h3>{menusData?.title}</h3>
               <p>{menusData?.description}</p>
@@ -17,7 +17,7 @@ function MenuHype({ data }) {
           <h4>{menusData?.price}€</h4>
         </div>
         <div className="menu-content">
-          <div className="menu-starter">
+          <div className="menu-content__item">
               <h3>{starter.type}</h3>
               <div>
                 <h4>{starter.title}</h4>
@@ -25,7 +25,8 @@ function MenuHype({ data }) {
                 <p>{starter.price}€</p>
               </div>
           </div>
-          <div className="menu-plate">
+          <div className="separation"></div>
+          <div className="menu-content__item">
           <h3>{plate.type}</h3>
               <div>
                 <h4>{plate.title}</h4>
@@ -33,7 +34,8 @@ function MenuHype({ data }) {
                 <p>{plate.price}€</p>
               </div>
           </div>
-          <div className="menu-dessert">
+          <div className="separation"></div>
+          <div className="menu-content__item">
           <h3>{dessert.type}</h3>
               <div>
                 <h4>{dessert.title}</h4>

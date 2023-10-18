@@ -18,29 +18,29 @@ function MenuHype({ data }) {
         </div>
         <div className="menu-content">
           <div className="menu-content__item">
-              <h3>{starter.type}</h3>
+              <h3>{starter?.type}</h3>
               <div>
-                <h4>{starter.title}</h4>
-                <p>{starter.description}</p>
-                <p>{starter.price}€</p>
+                <h4>{starter?.title}</h4>
+                <p>{starter?.description}</p>
+                <p>{starter?.price}€</p>
               </div>
           </div>
           <div className="separation"></div>
           <div className="menu-content__item">
-          <h3>{plate.type}</h3>
+          <h3>{plate?.type}</h3>
               <div>
-                <h4>{plate.title}</h4>
-                <p>{plate.description}</p>
-                <p>{plate.price}€</p>
+                <h4>{plate?.title}</h4>
+                <p>{plate?.description}</p>
+                <p>{plate?.price}€</p>
               </div>
           </div>
           <div className="separation"></div>
           <div className="menu-content__item">
-          <h3>{dessert.type}</h3>
+          <h3>{dessert?.type}</h3>
               <div>
-                <h4>{dessert.title}</h4>
-                <p>{dessert.description}</p>
-                <p>{dessert.price}€</p>
+                <h4>{dessert?.title}</h4>
+                <p>{dessert?.description}</p>
+                <p>{dessert?.price}€</p>
               </div>
           </div>
         </div>

@@ -5,31 +5,10 @@ const {log} = require("debug");
 const {compileETag} = require("express/lib/utils");
 
 // Send a query to database to get the selected menu by id in BDD
-const getMenuById = (id, res)  => {
-  if(!id) {
-    res.status(404);
-    throw new Error('Aucun identifiant n\'a été renseigné');
-  }
-  try {
-    let query = 
-    `
-      SELECT * FROM menus
-      JOIN plates p ON p.menu_id = ${id}
-    `;
-    sqlQuery(query, (error, results) => {
-
-      res.json(results);
-      res.status(200);
-    })
-  } catch (error) {
-    res.status(500);
-    throw new Error(error);
-  }
-}
 
 /* GET all menus. */
 router.get('/', function(req, res, next) {
-  let query = "SELECT * FROM plates p INNER JOIN menus m ON p.menu_id = m.id";
+  let query = "SELECT * FROM plates p JOIN menus m ON p.menu_id = m.id";
   try {
     sqlQuery(query, (error, results) => {
       res.json(results);
@@ -46,7 +25,15 @@ console.log('🥳');
 /* GET menu informations by id */
 router.get('/:id', function(req, res, next) {
   const currentId = req.params.id;
-  console.log(getMenuById(currentId, res));
+  try {
+    sqlQuery(`SELECT * FROM menus WHERE id = ${currentId}`, (error, results) => {
+      res.json(results);
+      res.status(200);
+    })
+  } catch (error) {
+    res.json(error);
+    res.status(500);
+  }
 });
 
 /* Post menu informations by id */
@@ -61,10 +48,11 @@ router.post('/', function(req, res, next) {
     let query = 
     `
       INSERT INTO menus (title, description, price, thumbnail) 
-      VALUES ('${newPost.title}', '${newPost.description}', ${newPost.price}, '${newPost.thumbnail}')
+      VALUES ('${newPost.title}', '${newPost.description}', '${newPost.price}', '${newPost.thumbnail}')
     `;
     sqlQuery(query, (error, results) => {
       res.status(200);
+      res.json(results);
     })
   } catch (error) {
     res.status(500);
